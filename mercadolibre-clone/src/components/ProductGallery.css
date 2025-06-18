@@ -1,0 +1,53 @@
+/* mercadolibre-clone/src/components/ProductGallery.css */
+.product-gallery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  background-color: #fff; /* Ensure white background for the gallery component itself */
+}
+
+.main-image-container {
+  margin-bottom: 15px;
+  border: 1px solid #f0f0f0; /* Light border around the main image */
+  padding: 5px; /* Small padding so border isn't flush with image */
+  background-color: #fff; /* White background for the image container */
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+  max-width: 100%; /* Ensure it doesn't overflow its container */
+}
+
+.main-image {
+  max-width: 100%;
+  height: auto;
+  max-height: 450px; /* Adjust as needed */
+  display: block; /* Remove extra space below image */
+  margin: 0 auto; /* Center if image aspect ratio is different */
+}
+
+.thumbnail-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start; /* Align thumbnails to the start */
+  gap: 8px; /* Spacing between thumbnails */
+  padding: 5px 0; /* Some padding around the thumbnails area */
+  max-width: 100%; /* Ensure thumbnails don't overflow */
+}
+
+.thumbnail-image {
+  width: 70px; /* Slightly smaller thumbnails */
+  height: 70px;
+  object-fit: cover; /* Ensure image covers the area without distortion */
+  cursor: pointer;
+  border: 2px solid #ddd; /* Default border */
+  border-radius: 4px;
+  transition: border-color 0.2s ease-in-out;
+}
+
+.thumbnail-image:hover {
+  border-color: #007bff; /* Blue border on hover, similar to many e-commerce sites */
+}
+
+.thumbnail-image.active {
+  border-color: #0062cc; /* Darker blue for active */
+  box-shadow: 0 0 5px rgba(0, 98, 204, 0.5); /* Subtle glow for active */
+}

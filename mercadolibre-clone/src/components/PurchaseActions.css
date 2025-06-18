@@ -1,0 +1,49 @@
+/* mercadolibre-clone/src/components/PurchaseActions.css */
+.purchase-actions-component {
+  display: flex;
+  flex-direction: column;
+  gap: 12px; /* Space between buttons */
+  padding-top: 10px; /* Add some padding above the button group */
+}
+
+.buy-now-button,
+.add-to-cart-button {
+  width: 100%; /* Make buttons take full width of their container */
+  padding: 14px 20px; /* Generous padding for a good click target */
+  font-size: 1rem; /* Standard font size */
+  font-weight: 600; /* Slightly bolder text */
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease, transform 0.1s ease;
+  text-align: center;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05); /* Subtle shadow */
+}
+
+.buy-now-button:active,
+.add-to-cart-button:active {
+    transform: translateY(1px); /* Slight press down effect */
+}
+
+.buy-now-button {
+  background-color: #3483fa; /* MercadoLibre's primary blue */
+  color: white;
+}
+
+.buy-now-button:hover {
+  background-color: #2968c8; /* Darker blue on hover */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+}
+
+.add-to-cart-button {
+  background-color: rgba(52, 131, 250, 0.1); /* Lighter blue, secondary action */
+  color: #3483fa; /* Primary blue text */
+  /* Optional: add a border if you prefer that look */
+  /* border: 1px solid #3483fa; */
+}
+
+.add-to-cart-button:hover {
+  background-color: rgba(52, 131, 250, 0.15); /* Slightly darker on hover */
+  /* border-color: #2968c8; */ /* If using border */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}

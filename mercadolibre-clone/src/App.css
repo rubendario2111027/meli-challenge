@@ -1,0 +1,117 @@
+/* Basic Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #ededed; /* MercadoLibre's typical background grey */
+  color: #333;
+}
+
+.App {
+  max-width: 1200px; /* Standard container width */
+  margin: 0 auto; /* Center the app */
+  background-color: #fff; /* Main content area background */
+}
+
+/* Styling for NavigationBar component (targets the <nav> element) */
+/* Note: NavigationBar component in NavigationBar.js uses a <nav> tag */
+nav {
+  background-color: #fff059; /* MercadoLibre yellow */
+  padding: 10px 20px;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 1rem; /* Spacing after nav */
+}
+nav p { /* Example style for the placeholder text */
+  color: #333;
+  font-weight: bold;
+}
+
+
+.product-page-container {
+  padding: 1rem 20px; /* Padding for the main content area */
+}
+
+/* Styling for Breadcrumbs component */
+/* Note: Breadcrumbs component in Breadcrumbs.js uses a <div> tag by default */
+/* We'll assume it will contain a <p> or similar for the text */
+/* This selector targets a div that is a direct child of product-page-container, then a p inside it.
+   Or, it targets a div that is a direct child of main, then a p inside it.
+   This needs to be adjusted if the Breadcrumbs component's structure is different.
+   For now, we target the placeholder <p> in the Breadcrumbs component.
+*/
+.product-page-container .breadcrumbs-component p { /* Added a class to Breadcrumbs for better targeting */
+  font-size: 0.85em;
+  color: #666;
+  padding-bottom: 10px;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #eee;
+}
+
+
+.main-content {
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping on smaller screens if necessary */
+  gap: 20px; /* Space between left and right columns */
+  margin-bottom: 1rem;
+}
+
+.left-column {
+  flex: 1 1 60%; /* Allow gallery to take up to 60% or shrink */
+  min-width: 300px; /* Minimum width before wrapping or major shrinking */
+  /* Placeholder style */
+  /* border: 1px solid #e0e0e0; */
+  /* padding: 10px; */
+}
+
+.right-column {
+  flex: 1 1 35%; /* Allow info column to take up to 35% or shrink */
+  min-width: 280px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Space between items in the right column */
+  /* Placeholder style */
+  /* border: 1px solid #e0e0e0; */
+  /* padding: 10px; */
+}
+
+/* General placeholder styles for components within columns or main layout */
+.left-column > div, /* ProductGallery */
+.right-column > div, /* ProductInfo, PurchaseActions, ShippingInfo, SellerInfo */
+.product-description-component, /* Specific class for ProductDescription */
+.product-specifications-component, /* Specific class for ProductSpecifications */
+.questions-answers-component, /* Specific class for QuestionsAndAnswers */
+.reviews-component { /* Specific class for Reviews */
+  border: 1px solid #f0f0f0; /* Lighter border for placeholders */
+  padding: 15px;
+  margin-bottom: 10px;
+  background-color: #ffffff; /* White background for component boxes */
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1); /* Subtle shadow */
+}
+
+/* Style for the placeholder text within these components */
+.left-column > div p,
+.right-column > div p,
+.product-description-component p,
+.product-specifications-component p,
+.questions-answers-component p,
+.reviews-component p {
+    font-size: 0.95em;
+    color: #555;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #f8f8f8;
+  color: #333;
+  margin-top: 30px;
+  border-top: 1px solid #ddd;
+}
